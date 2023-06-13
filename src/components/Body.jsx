@@ -35,7 +35,7 @@ export default function Body({ onAddTask }) {
       onAddTask(); // Call the callback function to trigger re-fetching of tasks
     } catch (error) {
       console.error(error);
-      toast.error("Error adding task!")
+      toast.error("Can't add empty!")
     }
   };
 
@@ -50,6 +50,7 @@ export default function Body({ onAddTask }) {
         containerProps={{
           className: "min-w-0",
         }}
+        required
       />
       <Button
         size="sm"
